@@ -1,24 +1,28 @@
 
 :root {
-  --nord0: #2E3440; /* Darkest background */
-  --nord1: #3B4252; /* Slightly lighter dark */
-  --nord2: #434C5E; /* Dark gray-blue */
-  --nord3: #4C566A; /* Gray-blue */
+  font-family: system-ui, sans-serif;
+  --bg-primary: #ffffff; /* Pure white background */
+  --bg-secondary: #f8f9fa; /* Soft off-white background */
+  --bg-teriary: #e9ecef; /* Light gray */
+  --bg-quartary: #dee2e6; /* Subtle border gray */
 
-  --nord4: #D8DEE9; /* Light gray */
-  --nord5: #E5E9F0; /* Lighter gray */
-  --nord6: #ECEFF4; /* Lightest gray, near-white */
+  --fg-primary: #212529; /* Deep black text */
+  --fg-secondary: #495057; /* Dark gray for secondary text */
+  --fg-tertiary: #868e96; /* Mid-gray for muted text */
+  --fg-quartary: #bbbbbb; /* Light-grey */
+  --fg-light-contrast: #fafafa; /* Light-white for contrast text */
+  --fg-full-contrast: white; /* White text for full contrast */
 
-  --nord7: #8FBCBB; /* Teal accent */
-  --nord8: #88C0D0; /* Lighter teal */
-  --nord9: #81A1C1; /* Soft blue */
-  --nord10: #5E81AC; /* Deep blue */
+  --accent-primary: #ffcc00; /* Vibrant yellow accent */
+  --accent-secondary: #ffeb3b; /* Soft pastel yellow */
+  --accent-tertiary: #0070f3; /* Vercel-inspired bright blue */
+  --accent-quartary: #0056b3; /* Deep rich blue */
 
-  --nord11: #BF616A; /* Red */
-  --nord12: #D08770; /* Orange */
-  --nord13: #EBCB8B; /* Yellow */
-  --nord14: #A3BE8C; /* Green */
-  --nord15: #B48EAD; /* Purple */
+  --nord11: #ff3b30; /* Bright red for errors */
+  --nord12: #ff8c00; /* Modern orange */
+  --nord13: #fdd835; /* Golden yellow */
+  --nord14: #21c55d; /* Soft modern green */
+  --nord15: #af52de; /* Vibrant purple */
 
   --border-radius: 0.5rem;
   --padding: 0.75rem;
@@ -31,11 +35,10 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 1200px;
-  background: var(--nord0);
+  background: var(--bg-primary);
   margin: auto;
   padding: 2rem;
-  color: var(--nord4);
-  font-family: "Arial", sans-serif;
+  color: var(--fg-primary);
   line-height: 1.6;
 }
 
@@ -47,7 +50,7 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1.5rem;
-  background: var(--nord1);
+  background: var(--bg-secondary);
   margin-bottom: 2rem;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -59,11 +62,11 @@ body {
 
 /* Input Fields */
 #input-container input {
-  background: var(--nord2);
-  color: var(--nord5);
+  background: var(--bg-teriary);
+  color: var(--fg-secondary);
   padding: var(--padding);
   border-radius: var(--border-radius);
-  border: 1px solid var(--nord3);
+  border: 1px solid var(--bg-quartary);
   outline: none;
   transition: var(--transition);
   width: 120px;
@@ -71,16 +74,16 @@ body {
 }
 
 #input-container input:focus {
-  border-color: var(--nord8);
-  box-shadow: 0 0 6px var(--nord8);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 6px var(--accent-secondary);
 }
 
 /* Buttons */
 #input-container button {
-  background: var(--nord9);
+  background: var(--accent-tertiary);
   border-radius: var(--border-radius);
   padding: var(--padding);
-  color: var(--nord6);
+  color: var(--fg-light-contrast);
   font-weight: bold;
   border: none;
   outline: none;
@@ -89,12 +92,12 @@ body {
 
 #input-container button:hover {
   cursor: pointer;
-  background: var(--nord10);
+  background: var(--accent-quartary);
   transform: scale(1.05);
 }
 
 #input-container button:active {
-  background: var(--nord8);
+  background: var(--accent-secondary);
   transform: scale(0.95);
 }
 
@@ -103,23 +106,16 @@ body {
   width: 100%;
   max-width: 500px; /* Prevent it from getting too large */
   height: auto; /* Maintain aspect ratio */
-  background: var(--nord3);
+  background: var(--bg-quartary);
   image-rendering: pixelated;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Links */
 a {
-  color: var(--nord7);
+  color: var(--fg-primary);
   text-decoration: none;
   font-weight: bold;
-  transition: var(--transition);
-}
-
-a:hover {
-  color: var(--nord8);
-  text-decoration: underline;
 }
 
 /* Responsive Design */
