@@ -2,5 +2,5 @@
 
 Generate random images by generating randomly colored pixels in the given size.
 
-Website: [randompixel](https://randompixels.axelj.dev)
+Website: [randompixels](https://randompixels.axelj.dev)
 
