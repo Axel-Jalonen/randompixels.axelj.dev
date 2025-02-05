@@ -1,3 +1,4 @@
+
 :root {
   --nord0: #2E3440; /* Darkest background */
   --nord1: #3B4252; /* Slightly lighter dark */
@@ -20,42 +21,123 @@
   --nord15: #B48EAD; /* Purple */
 
   --border-radius: 0.5rem;
-  --padding: 1rem;
-  --margin: 1rem;
+  --padding: 0.75rem;
+  --margin: 0.75rem;
+  --transition: 0.2s ease-in-out;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 1200px;
   background: var(--nord0);
   margin: auto;
+  padding: 2rem;
+  color: var(--nord4);
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
 }
 
+/* Input Container */
 #input-container {
-  height: 150px;
-  margin: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--nord1);
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #input-container * {
   font-size: 1rem;
 }
 
-#input-container button, input {
-  background: var(--nord1);
-  border-radius: var(--border-radius);
+/* Input Fields */
+#input-container input {
+  background: var(--nord2);
+  color: var(--nord5);
   padding: var(--padding);
-  color: var(--nord4);
-  margin: var(--margin);
-  border: none;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--nord3);
   outline: none;
+  transition: var(--transition);
+  width: 120px;
+  text-align: center;
 }
 
+#input-container input:focus {
+  border-color: var(--nord8);
+  box-shadow: 0 0 6px var(--nord8);
+}
+
+/* Buttons */
 #input-container button {
-  outline: none;
+  background: var(--nord9);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  color: var(--nord6);
+  font-weight: bold;
   border: none;
+  outline: none;
+  transition: var(--transition);
 }
 
 #input-container button:hover {
   cursor: pointer;
+  background: var(--nord10);
+  transform: scale(1.05);
+}
+
+#input-container button:active {
+  background: var(--nord8);
+  transform: scale(0.95);
+}
+
+#noiseCanvas {
+  display: block;
+  width: 100%;
+  max-width: 500px; /* Prevent it from getting too large */
+  height: auto; /* Maintain aspect ratio */
+  background: var(--nord3);
+  image-rendering: pixelated;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Links */
+a {
+  color: var(--nord7);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--nord8);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  
+  #input-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  #input-container input {
+    width: 100%;
+  }
+
+  #input-container button {
+    width: 100%;
+  }
 }
