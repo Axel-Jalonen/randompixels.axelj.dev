@@ -1,0 +1,61 @@
+:root {
+  --nord0: #2E3440; /* Darkest background */
+  --nord1: #3B4252; /* Slightly lighter dark */
+  --nord2: #434C5E; /* Dark gray-blue */
+  --nord3: #4C566A; /* Gray-blue */
+
+  --nord4: #D8DEE9; /* Light gray */
+  --nord5: #E5E9F0; /* Lighter gray */
+  --nord6: #ECEFF4; /* Lightest gray, near-white */
+
+  --nord7: #8FBCBB; /* Teal accent */
+  --nord8: #88C0D0; /* Lighter teal */
+  --nord9: #81A1C1; /* Soft blue */
+  --nord10: #5E81AC; /* Deep blue */
+
+  --nord11: #BF616A; /* Red */
+  --nord12: #D08770; /* Orange */
+  --nord13: #EBCB8B; /* Yellow */
+  --nord14: #A3BE8C; /* Green */
+  --nord15: #B48EAD; /* Purple */
+
+  --border-radius: 0.5rem;
+  --padding: 1rem;
+  --margin: 1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  background: var(--nord0);
+  margin: auto;
+}
+
+#input-container {
+  height: 150px;
+  margin: 3rem;
+}
+
+#input-container * {
+  font-size: 1rem;
+}
+
+#input-container button, input {
+  background: var(--nord1);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  color: var(--nord4);
+  margin: var(--margin);
+  border: none;
+  outline: none;
+}
+
+#input-container button {
+  outline: none;
+  border: none;
+}
+
+#input-container button:hover {
+  cursor: pointer;
+}

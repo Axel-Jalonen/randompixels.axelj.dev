@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css"/>
+        <link rel="icon" href="https://axelj.dev/favicon.svg" type="image/svg+xml">
+        <meta name="description" content="Generate random pixel images instantly, all locally in your browser—no ads, no tracking, and no data collection. Perfect for developers, testing, and creative coding projects." />
+        <title>Random Pixel Noise</title>
+    </head>
+    <body>
+        <div id="input-container">
+            <input type="number" id="width" placeholder="Width" value="500">
+            <input type="number" id="height" placeholder="Height" value="500">
+            <button id="generate-button">Generate</button>
+        </div>
+        <canvas id="noiseCanvas" style="image-rendering: pixelated;"></canvas>
+        <script src="main.js"></script>
+    </body>
+</html>
