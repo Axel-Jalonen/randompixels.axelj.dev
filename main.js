@@ -25,12 +25,3 @@ const generate_button = document.getElementById("generate-button");
 generate_button.addEventListener("click", generateNoise);
 
 window.onload = generateNoise;
-
-window.addEventListener("keydown", keydownHandler)
-
-function keydownHandler(e) {
-  if (e.key === "Enter" || e.key === " ") {
-    e.preventDefault();
-    generateNoise();
-  }
-}

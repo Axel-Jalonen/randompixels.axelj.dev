@@ -1,5 +1,5 @@
 :root {
-  font-family: monospace;
+  font-family: system-ui;
 }
 
 body {
@@ -9,19 +9,39 @@ body {
 }
 
 input,
-a {
+a,
+button {
   font-family: inherit;
   font-size: inherit;
 }
 
-button,
-input {
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  border: 0.125rem solid transparent;
+}
+
+a:focus-within {
+  border: 0.125rem solid blue;
+}
+
+a img {
+  height: 1.5rem;
+}
+
+button {
   margin: 0;
-  border-radius: 0;
-  outline: none;
   padding: 0.5rem 1rem;
-  border: 2px solid black;
-  background: inherit;
+  background: white;
+  border-radius: 0.5rem;
+  border: 0.125rem solid #dddddd;
+  outline: none;
+}
+
+button:focus-within {
+  border: 0.125rem solid blue;
 }
 
 button:hover {
@@ -30,8 +50,40 @@ button:hover {
 
 #input-container {
   margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #noiseCanvas {
   width: 100%;
+}
+
+input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  display: none;
+}
+
+
+.input-container-px {
+  display: inline-flex;
+  border: 0.125rem solid #dddddd;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.input-container-px:focus-within {
+  border: 0.125rem solid blue;
+}
+
+
+.input-type-container {
+  color: grey;
 }
