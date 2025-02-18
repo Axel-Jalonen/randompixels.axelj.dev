@@ -79,6 +79,21 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 0.5rem;
 }
 
+@media screen and (max-width: 762px) {
+  body {
+    padding: 1rem;
+  }
+
+  .input-container-px {
+    margin: 0.25rem 0;
+  }
+
+  #input-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .input-container-px:focus-within {
   border: 0.125rem solid blue;
 }
